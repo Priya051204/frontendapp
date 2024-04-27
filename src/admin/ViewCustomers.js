@@ -29,7 +29,7 @@ export default function ViewCustomers() {
   }
 
   return (
-    <div> {/* Apply container class */}
+    <div>
       <h1>Customers</h1>
       
       <table>

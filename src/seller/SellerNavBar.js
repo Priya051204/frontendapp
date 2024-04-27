@@ -31,8 +31,8 @@ export default function SellerNavBar() {
               <Link to="/updatesellerprofile">Update Profile</Link>
             </div>
           </li>
-          <li><Link to="/addproduct">Add Product</Link></li> {/* Corrected the link text */}
-          <li><Link to="/viewdelivers">View Delivery's</Link></li> {/* Added View Delivers link */}
+          <li><Link to="/addproduct">Add Product</Link></li> 
+          <li><Link to="/viewdelivers">View Delivery's</Link></li> 
           <li><Link to="/" className="logout-button" onClick={handleLogout}>Logout</Link></li>
         </ul>
       </nav>

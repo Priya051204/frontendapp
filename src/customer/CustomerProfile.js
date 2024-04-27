@@ -25,7 +25,7 @@ export default function CustomerProfile() {
         <p><strong>Contact:</strong> {customerData.contact}</p>
       </div>
     ) : (
-      <p>No Job Seeker Data Found</p>
+      <p>No Customer Data Found</p>
     )
   );
 }

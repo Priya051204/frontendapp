@@ -23,7 +23,7 @@ export default function UpdateCustomerProfile() {
     if (storedCustomerData) {
       const parsedCustomerData = JSON.parse(storedCustomerData);
       setCustomerData(parsedCustomerData);
-      setInitialCustomerData(parsedCustomerData); // Store initial customer  data
+      setInitialCustomerData(parsedCustomerData); 
     }
   }, []);
 
@@ -51,7 +51,6 @@ export default function UpdateCustomerProfile() {
         const res = await axios.get(`${config.url}/customerprofile/${customerData.email}`, updatedData)
         localStorage.setItem("customer",JSON.stringify(res.data))
       } else {
-        // No changes
         setMessage("No Changes in Customer Profile");
         setError("");
       }
