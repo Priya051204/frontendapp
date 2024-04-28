@@ -21,7 +21,7 @@ export default function UpdateSellerProfile() {
   const [initialSellerData, setInitialSellerData] = useState({});
 
   useEffect(() => {
-    const storedSellerData = localStorage.getItem('retailer');
+    const storedSellerData = localStorage.getItem('seller');
     if (storedSellerData) {
       const parsedSellerData = JSON.parse(storedSellerData);
       setSellerData(parsedSellerData);
@@ -43,6 +43,7 @@ export default function UpdateSellerProfile() {
         }
       }
       if (Object.keys(updatedData).length !== 0) {
+        // There are changes
         updatedData.email = sellerData.email;
         const response = await axios.put('http://localhost:2014/updatesellerprofile', updatedData);
         setMessage(response.data);
@@ -50,6 +51,7 @@ export default function UpdateSellerProfile() {
         const res = await axios.get(`http://localhost:2014/sellerprofile/${sellerData.email}`);
         localStorage.setItem("seller", JSON.stringify(res.data));
       } else {
+        // No changes
         setMessage("No Changes in Seller Profile");
         setError("");
       }

@@ -107,7 +107,7 @@ export default function Registration() {
 
   return (
     <div className="registration-container">
-      <h3 align="center"><u>Customer Registration</u></h3>
+      <h3 align="center"><u> Customer Registration</u></h3>
       {
         message ? <h4 align="center" className="success-message">{message}</h4> : <h4 align="center" className="error-message">{error}</h4>
       }

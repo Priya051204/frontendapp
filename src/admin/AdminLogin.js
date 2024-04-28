@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate, Link } from 'react-router-dom';
-import '../main/login.css'; 
+import { useNavigate } from 'react-router-dom';
+import '../main/login.css';
 import config from '../config'
 
-export default function AdminLogin({onAdminLogin}) {
+export default function AdminLogin({ onAdminLogin }) {
   const [formData, setFormData] = useState({
     username: '',
     password: ''
   });
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
+  
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -21,20 +22,23 @@ export default function AdminLogin({onAdminLogin}) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:2014/checkadminlogin', formData);
-      if (response.data != null) {
-        onAdminLogin();
+      const response = await axios.post(`${config.url}/checkadminlogin`, formData);
+      if (response.data != null) 
+      {
+        onAdminLogin(); //this will invoke onAdminLogin() in App.js
 
         localStorage.setItem('admin', JSON.stringify(response.data));
-
+        
         navigate("/adminhome");
-      } else {
-        setMessage("")
-        setError("Login Failed Please Check Your Credentials and login again")
+      } 
+      else 
+      {
+        setMessage("");
+        setError("Login Failed Please Check Your Credentials and login again");
       }
     } catch (error) {
-      setMessage("")
-      setError(error.message)
+      setMessage("");
+      setError(error.message);
     }
   };
 
@@ -54,7 +58,6 @@ export default function AdminLogin({onAdminLogin}) {
         </div>
         <button type="submit" className="button">Login</button>
       </form>
-      <p className="registerMessage">Don't have an account? <Link to="/sellerapplicantregistration">Register here</Link></p>
     </div>
   );
 }

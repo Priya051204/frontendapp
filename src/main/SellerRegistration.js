@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './SellerRegistration.css';
+import './SellerRegistration.css'; 
 import config from '../config'
 
 export default function SellerRegistration() {
@@ -89,7 +89,7 @@ export default function SellerRegistration() {
   };
 
   return (
-    <div className="registration-container"> 
+    <div className="registration-container">
       <h3 align="center"><u>Seller Registration</u></h3>
       {
         message ? <h4 align="center">{message}</h4> : <h4 align="center">{error}</h4>

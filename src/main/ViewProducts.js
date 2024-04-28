@@ -78,8 +78,8 @@ const styles = {
     justifyContent: 'space-around',
   },
   productCard: {
-    width: '200px', 
-    margin: '10px', 
+    width: '200px', // Adjust the width of the card
+    margin: '10px', // Adjust the margin of the card
     border: '1px solid #ccc',
     borderRadius: '10px',
     overflow: 'hidden',
@@ -90,11 +90,11 @@ const styles = {
   },
   productImage: {
     width: '100%',
-    height: '150px', 
+    height: '150px', // Adjust the height of the image
     objectFit: 'cover',
   },
   productDetails: {
-    padding: '10px', 
+    padding: '10px', // Adjust the padding of the details
     textAlign: 'left',
   },
   showDescriptionButton: {
@@ -103,12 +103,12 @@ const styles = {
     backgroundColor: 'red',
     color: '#fff',
     border: 'none',
-    padding: '5px 10px', 
+    padding: '5px 10px', // Adjust the padding of the button
     borderRadius: '5px',
     cursor: 'pointer',
   },
   description: {
-    padding: '10px', 
+    padding: '10px', // Adjust the padding of the description
     backgroundColor: 'rgba(255, 255, 255, 0.8)',
     zIndex: 1,
   },
