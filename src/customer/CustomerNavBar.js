@@ -8,7 +8,6 @@ import PurchaseProduct from './PurchaseProduct';
 import MyOrders from './MyOrders';
 import AddProduct from './AddProduct';
 import MyProductsPage from './MyProductsPage';
-import config from '../config'
 
 import './style.css';
 

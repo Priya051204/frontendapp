@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './seller.css';
-import config from '../config'
 
 export default function SellerProfile() {
   const [sellerData, setSellerData] = useState(null);

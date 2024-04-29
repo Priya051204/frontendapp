@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './seller.css';
-import config from '../config'
 
 export default function UpdateSellerProfile() {
   const [sellerData, setSellerData] = useState({

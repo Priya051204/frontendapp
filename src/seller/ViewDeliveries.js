@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
-import config from '../config'
 
 export default function ViewDeliveries() {
   const [deliveries, setDeliveries] = useState([]);

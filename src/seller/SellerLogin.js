@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 import '../main/login.css'; 
-import config from '../config'
 
 export default function SellerLogin({onSellerLogin}) {
   const [formData, setFormData] = useState({

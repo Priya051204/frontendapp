@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './SellerRegistration.css'; 
-import config from '../config'
 
 export default function SellerRegistration() {
   const [formData, setFormData] = useState({

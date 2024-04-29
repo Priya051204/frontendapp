@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 20px; /* Add padding to create space between text and edges of the browser window */
   background-repeat: no-repeat;
-  background-image: url('C:\Users\LENOVO\OneDrive - K L University\Desktop\MSWD\SDP\petproject\frontendapp\project\src\Images\image.jpg');;
+  background-image: url("image.jpg");
   background-size: cover;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

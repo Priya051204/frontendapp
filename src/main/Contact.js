@@ -1,5 +1,4 @@
 import React from 'react';
-import config from '../config'
 
 export default function Contact() {
   return (
@@ -10,7 +9,7 @@ export default function Contact() {
         <br />
         You can contact us at:
         <br />
-        Phone: <a href="tel:+91 7895463210">7895463210</a>
+        Phone: <a href="tel:+91 6399789568">6399789568</a>
         <br />
         Email: <a href="For further clarifications mail to petspaw0516@gmail.com">petspaw0516@gmail.com</a>
       </p>

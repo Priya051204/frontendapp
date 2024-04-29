@@ -6,7 +6,6 @@ import UpdateSellerProfile from './UpdateSellerProfile';
 import AddProduct from './AddProduct';
 import ViewDelivers from './ViewDeliveries'; 
 import './seller.css';
-import config from '../config'
 
 export default function SellerNavBar() {
   const navigate = useNavigate();

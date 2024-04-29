@@ -11,7 +11,6 @@ import ViewProducts from './ViewProducts';
 import './style.css';
 import SellerLogin from '../seller/SellerLogin';
 import SellerRegistration from './SellerRegistration'
-import config from '../config'
 
 export default function MainNavBar({ onAdminLogin, onCustomerLogin, onSellerLogin }) {
   return (

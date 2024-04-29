@@ -6,7 +6,6 @@ import MainNavBar from './main/MainNavBar';
 import logo from '../src/Images/logo.jpg';
 import './App.css'
 import SellerNavBar from './seller/SellerNavBar';
-import config from '../src/config'
 
 function App() {
   const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);
