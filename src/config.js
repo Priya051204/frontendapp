@@ -1,7 +1,7 @@
 const config = 
 {
-    //url:'http://localhost:2014'
-    url:'https://backendapp-edwx.onrender.com'
+    url:'http://localhost:2014'
+    // url:'https://backendapp-edwx.onrender.com'
 };
 
 export default config;

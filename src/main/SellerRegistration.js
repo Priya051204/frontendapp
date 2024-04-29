@@ -88,7 +88,7 @@ export default function SellerRegistration() {
   };
 
   return (
-    <div className="registration-container"> {/* Apply CSS class for styling */}
+    <div className="registration-container"> 
       <h3 align="center"><u>Seller Registration</u></h3>
       {
         message ? <h4 align="center">{message}</h4> : <h4 align="center">{error}</h4>
