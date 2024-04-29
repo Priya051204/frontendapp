@@ -14,7 +14,7 @@ export default function SellerNavBar() {
     localStorage.removeItem('isSellerLoggedIn');
     localStorage.removeItem('seller');
 
-    navigate('/sellerlogin');
+    navigate('/');
     window.location.reload();
   };
 

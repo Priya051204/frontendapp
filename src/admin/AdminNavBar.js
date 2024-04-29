@@ -13,7 +13,7 @@ export default function AdminNavBar() {
   const handleLogout = () => {
     localStorage.removeItem('isAdminLoggedIn');
     localStorage.removeItem('admin');
-    navigate('/adminlogin');
+    navigate('/');
     window.location.reload()
   };
 

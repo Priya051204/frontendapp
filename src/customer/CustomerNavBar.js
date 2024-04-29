@@ -18,7 +18,7 @@ export default function CustomerNavBar() {
     localStorage.removeItem('isCustomerLoggedIn');
     localStorage.removeItem('customer');
 
-    navigate('/customerlogin');
+    navigate('/');
     window.location.reload();
   };
 
