@@ -35,7 +35,7 @@ export default function CustomerNavBar() {
             </div>
           </li>
           <li><Link to="/buyproduct">Purchase Product</Link></li>
-          {/* <li><Link to="/myorders">My Orders</Link></li>  */}
+          <li><Link to="/myorders">My Orders</Link></li> 
           <li><Link to="/addproduct">Add Adoption Pet</Link></li>
           {/* <li><Link to="/myproducts">My Products</Link></li> */}
           <li><Link to="/" className="logout-button" onClick={handleLogout}>Logout</Link></li>
