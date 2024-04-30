@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 import '../main/login.css'; 
+import config from '../config';
 
 export default function SellerLogin({onSellerLogin}) {
   const [formData, setFormData] = useState({
@@ -20,7 +21,7 @@ export default function SellerLogin({onSellerLogin}) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:2014/checksellerlogin', formData);
+      const response = await axios.post(`${config.url}/checksellerlogin`, formData);
       if (response.data != null) {
         onSellerLogin();
 

@@ -30,7 +30,7 @@ export default function CustomerLogin({ onCustomerLogin }) {
 
         localStorage.setItem('customer', JSON.stringify(response.data));
 
-        navigate("/customerrhome");
+        navigate("/customerhome");
       } 
       else 
       {
