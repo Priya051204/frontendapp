@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './SellerRegistration.css'; 
+import config from '../config';
 
 export default function SellerRegistration() {
   const [formData, setFormData] = useState({
@@ -66,7 +67,7 @@ export default function SellerRegistration() {
         return;
       }
 
-      const response = await axios.post('http://localhost:2014/sellerapplicantregistration', formData);
+      const response = await axios.post(`${config.url}/sellerapplicantregistration`, formData);
       if (response.status === 200) {
         setFormData({
           fullname: '',
