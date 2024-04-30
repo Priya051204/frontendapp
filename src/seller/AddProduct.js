@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import config from '../config';
 
 export default function AddProduct() {
   const [formData, setFormData] = useState({
@@ -30,7 +31,7 @@ export default function AddProduct() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:2014/addproduct', formData);
+      const response = await axios.post(`${config.url}/addproduct`, formData);
       if (response.status === 200) {
         setFormData({
           name: '',

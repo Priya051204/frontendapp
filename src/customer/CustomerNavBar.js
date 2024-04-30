@@ -8,7 +8,6 @@ import PurchaseProduct from './PurchaseProduct';
 import MyOrders from './MyOrders';
 import AddProduct from './AddProduct';
 import MyProductsPage from './MyProductsPage';
-
 import './style.css';
 
 export default function CustomerNavBar() {

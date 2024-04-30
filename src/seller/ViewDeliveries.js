@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
+import config from '../config'
 
 export default function ViewDeliveries() {
   const [deliveries, setDeliveries] = useState([]);
@@ -10,9 +11,9 @@ export default function ViewDeliveries() {
       const seller = JSON.parse(localStorage.getItem('seller')); 
       const sellerEmail = seller.email;
 
-      const response = await axios.get(`http://localhost:2014/viewproductorders/${sellerEmail}`);
+      const response = await axios.get(`${config.url}/viewproductorders/${sellerEmail}`);
       const deliveriesData = await Promise.all(response.data.map(async (delivery) => {
-        const productResponse = await axios.get(`http://localhost:2014/productbyid/${delivery.productId}`);
+        const productResponse = await axios.get(`${config.url}/productbyid/${delivery.productId}`);
         const productName = productResponse.data.name;
         return {
           ...delivery,
@@ -28,7 +29,7 @@ export default function ViewDeliveries() {
 
   const handleStatusUpdate = async (orderId, status) => {
     try {
-      const response = await axios.put('http://localhost:2014/updateproductorderstatus', { orderId, status });
+      const response = await axios.put(`${config.url}/updateproductorderstatus`, { orderId, status });
       console.log(response.data);
       fetchDeliveries();
     } catch (error) {

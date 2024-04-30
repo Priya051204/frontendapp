@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './seller.css';
+import config from '../config'
 
 export default function UpdateSellerProfile() {
   const [sellerData, setSellerData] = useState({
@@ -44,10 +45,10 @@ export default function UpdateSellerProfile() {
       if (Object.keys(updatedData).length !== 0) {
         // There are changes
         updatedData.email = sellerData.email;
-        const response = await axios.put('http://localhost:2014/updatesellerprofile', updatedData);
+        const response = await axios.put(`${config.url}/updatesellerprofile`, updatedData);
         setMessage(response.data);
         setError('');
-        const res = await axios.get(`http://localhost:2014/sellerprofile/${sellerData.email}`);
+        const res = await axios.get(`${config.url}/sellerprofile/${sellerData.email}`);
         localStorage.setItem("seller", JSON.stringify(res.data));
       } else {
         // No changes
